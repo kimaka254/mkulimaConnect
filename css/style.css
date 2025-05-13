@@ -1,0 +1,485 @@
+/*=============== Root Variables ===============*/
+:root {
+    --primary: #28a745;
+    --secondary: #ffc107;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --highlight: #ff6b35;
+  }
+  
+  /*=============== Global Styles ===============*/
+  body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+  }
+  
+  .text-highlight {
+    color: var(--highlight);
+  }
+  
+  /*=============== Backgrounds ===============*/
+  .bg-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  }
+  
+  .bg-gradient-reverse {
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  }
+  
+  /*=============== Navbar ===============*/
+  .navbar {
+    transition: all 0.3s;
+    background-color: rgba(40, 167, 69, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(40, 167, 69, 0.95) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+  }
+  
+  /*=============== Hero Section ===============*/
+  .hero, .about-hero, .contact-hero {
+    padding: 180px 0 100px;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(255, 193, 7, 0.1) 100%);
+    position: relative;
+  }
+  
+  .hero-image-container {
+    position: relative;
+  }
+  
+  .hero-image {
+    border: 5px solid white;
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: all 0.5s ease;
+  }
+  
+  .hero-image:hover {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .floating-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /*=============== Buttons  ===============*/
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background: var(--accent);
+    color: var(--text-dark);
+    box-shadow: var(--shadow);
+  }
+  /*=============== Feature Cards ===============*/
+  .feature-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    height: 100%;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+  }
+  
+  .feature-link {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .feature-link:hover {
+    color: var(--highlight);
+    transform: translateX(5px);
+  }
+  
+  /*=============== Timeline ===============*/
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 50px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  }
+  
+  .timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .timeline-number {
+    position: absolute;
+    left: -50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .timeline-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  }
+  
+  .timeline-content h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+  }
+  
+  /*=============== Testimonials ===============*/
+  .testimonial-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+  }
+  
+  .testimonial-img {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .testimonial-content {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .testimonial-content p {
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .rating {
+    color: var(--secondary);
+    margin-top: 15px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+  
+  .carousel-control-prev {
+    left: -20px;
+  }
+  
+  .carousel-control-next {
+    right: -20px;
+  }
+  
+  /*=============== Mission Cards ===============*/
+  .mission-card {
+    background: white;
+    transition: all 0.3s ease;
+  }
+  
+  .mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .mission-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /*=============== Stats ===============*/
+  .stats {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stat-number {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .stat-label {
+    font-size: 18px;
+    opacity: 0.9;
+  }
+  
+  /*=============== Team Section ===============*/
+  .team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-img {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  
+  .team-card:hover .team-img img {
+    transform: scale(1.1);
+  }
+  
+  .social-links {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(40, 167, 69, 0.9);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .team-card:hover .social-links {
+    bottom: 0;
+  }
+  
+  .social-links a {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    background: white;
+    color: var(--primary);
+  }
+  
+  .team-info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .team-info h4 {
+    margin-bottom: 5px;
+  }
+  
+  .team-info p {
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  /*=============== Partners ===============*/
+  .grayscale {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .grayscale:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  
+  /*=============== Contact Info Cards ===============*/
+  .info-card {
+    background: white;
+    transition: all 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .info-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  /*=============== Form Section ===============*/
+  .form-image {
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /*=============== FAQ ===============*/
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--primary);
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(40, 167, 69, 0.25);
+  }
+  
+  /*=============== Footer ===============*/
+  .footer {
+    position: relative;
+  }
+  
+  .social-icons a {
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+  }
+  
+  /*=============== Responsive ===============*/
+  @media (max-width: 768px) {
+    .hero, .about-hero, .contact-hero {
+      padding: 150px 0 80px;
+      text-align: center;
+    }
+  
+    .display-4 {
+      font-size: 2.5rem;
+    }
+  
+    .timeline::before {
+      left: 15px;
+    }
+  
+    .timeline-number {
+      left: -40px;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+    }
+  }
+  
+  /*=============== Form Validation ===============*/
+  .was-validated .form-control:invalid,
+  .was-validated .form-select:invalid {
+    border-color: #dc3545;
+  }
+  
+  .was-validated .form-control:valid,
+  .was-validated .form-select:valid {
+    border-color: #28a745;
+  }
+  
