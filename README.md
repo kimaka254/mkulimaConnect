@@ -4,7 +4,7 @@
 MkulimaConnect is a responsive web platform designed to empower small-scale Kenyan farmers by connecting them with agricultural resources, market information, and buyers. This project addresses key challenges faced by farmers including lack of access to information, unstable market prices, and limited online visibility.
 
 ## Live Preview
-[View Live Demo](https://yourusername.github.io/mkulimaConnect)
+[View Live Demo](https://kimaka254.github.io/mkulimaConnect/)
 
 ## Features
 - Responsive Design: Works on all devices from mobile phones to desktops
@@ -41,7 +41,7 @@ mkulimaconnect/
 ## Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/mkulimaConnect.git
+git clone https://github.com/kimaka254/mkulimaConnect.git
 ```
 2. Navigate to project directory
 ```bash
